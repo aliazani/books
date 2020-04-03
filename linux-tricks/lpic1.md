@@ -9,7 +9,7 @@ marp: true
 
 ---
 
-# **Lesson 1: Basics**
+# **Basics**
 
 ---
 
@@ -24,7 +24,7 @@ marp: true
 
 ---
 
-# **Lesson 2: vi and nano**
+# **vi and nano**
 
 ---
 
@@ -105,7 +105,7 @@ marp: true
 
 ---
 
-# **Lesson 3: user and groups**
+# **user and groups**
 
 ---
 
@@ -146,7 +146,7 @@ And this is much same as root
 
 ---
 
-# **Lesson 4: File Premissions**
+# **File Premissions**
 
 ---
 
@@ -207,7 +207,7 @@ And this is much same as root
 
 ---
 
-# **Lesson 5: CronJob**
+# **CronJob**
 
 ---
 
@@ -229,7 +229,7 @@ And this is much same as root
 
 ---
 
-# **Lesson 6: Package management**
+# **Package management**
 
 ---
 
@@ -338,7 +338,7 @@ And this is much same as root
 
 ---
 
-# **Lesson 7: System Resources**
+# **System Resources**
 
 ---
 
@@ -356,7 +356,7 @@ And this is much same as root
 
 ---
 
-# **Lesson 8: Find files**
+# **Find files**
 
 ---
 
@@ -367,7 +367,7 @@ And this is much same as root
 
 ---
 
-# **Lesson 9: wc, split, cat, diff**
+# **wc, split, cat, diff**
 
 ---
 
@@ -405,7 +405,7 @@ And this is much same as root
 
 ---
 
-# **Lesson 10: Streams**
+# **10: Streams**
 
 ---
 
@@ -438,7 +438,7 @@ And this is much same as root
 
 ---
 
-# **Lesson 11: Pipes**
+# **Pipes**
 
 ---
 
@@ -447,7 +447,7 @@ And this is much same as root
 
 ---
 
-# **Lesson 12: grep, fgrep, egrep**
+# **grep, fgrep, egrep**
 
 ---
 
@@ -499,7 +499,7 @@ hello$
 
 ---
 
-# **Lesson 13: cut command**
+# **cut command**
 
 ---
 
@@ -513,7 +513,7 @@ just cut a part of file for example uernames in passwd files
 
 ---
 
-# **Lesson 14: Stram editor(sed)**
+# **Stram editor(sed)**
 
 ---
 
@@ -533,7 +533,7 @@ just cut a part of file for example uernames in passwd files
 
 ---
 
-# **Lesson 15: tee**
+# **tee**
 
 ---
 
@@ -566,15 +566,22 @@ just cut a part of file for example uernames in passwd files
 
 ---
 
-# **Lesson 16: /Sys, /proc, /dev, /var**
+# **/Sys, /proc, /dev, /var**
 
 ---
+
+# Basic
 
 * everything in linux is a file
 * /bin is for none essential commands binary
 * /sbin is for essential commands binary for running system
 * /etc is boot type information like fstab and other things such as samba for share
-* /sys is linked to kernel and virtual file
+* /sys is linked to kernel and it's a virtual file
+
+---
+
+# Proc
+
 * /proc is linked to kernel and virtual file
 * /proc is for proccess are running in our system
 * /proc/uptime ==> the system uptime in seconds
@@ -600,7 +607,40 @@ just cut a part of file for example uernames in passwd files
 * contains file reffrence to hardware devices and it's components
 * df -h ==> disk free -human-readable
 
-*
+* sda5 ==> extended usually for swap
+
+* cat random or urandom ==> will show us a lot of random stuff that you can use for generate key for encryption
+
+---
+
+# /var
+
+* This directory is for variables
+
+* You can store things you don't need them after reboot in the /tmp which is in the /var directory
+
+* You can see the system log in /var/log that changes after every reboot
+
+* /var/spool/ ==> is for everything like spool for exmp:cron
+
+* /var/mail ==> for send mail or mail files
+
+---
+
+# **System architecture and Management**
+
+---
+
+# lsmod
+
+* It shows which loadable kernel modules are currently loaded(List of kernel modules)
+
+* Contain list of /proc/modules
+
+* or we can cat /proc/modules
+
+* lsmod | grep snd ==> snd is for sound devices
+
 ---
 
 # **Tmux**
