@@ -643,6 +643,50 @@ just cut a part of file for example uernames in passwd files
 
 ---
 
+# **lspci-lsusb**
+
+---
+
+# lspci
+
+* Show us all of the pci
+
+* for example lspci | grep VGA
+
+* -v ==> verbose
+
+* -vv ==> level 2 for verbose
+
+* lspci -n ==> remove the name of pci
+
+* -x ==> gives us increasing level of hexadecimal
+
+* -b ==> shows us our pci bridges
+
+* -t ==> tree view
+
+* -s 00:1f(Intel) ==> show us the pci with 00:1f(Intel) vendor id(Kind of a search like grep)
+
+* lspci uses /usr/share/misc/pci.ids ==> you can cat it and it shows us the information about pcis
+
+* -i sub.ids ==> Use specified ID database instead of /usr/share/misc/pci.ids
+
+* -m ==> Produce machine-readable output
+
+---
+
+# lsub
+
+* List USB devices
+
+* -s ==> search mechanisem
+
+* -v ==> verbose
+
+* -d 8087:0024 ==> show us specific vendor usbs
+
+---
+
 # **Tmux**
 
 ---
