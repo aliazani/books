@@ -687,6 +687,24 @@ just cut a part of file for example uernames in passwd files
 
 ---
 
+# **modprobe**
+
+---
+
+* modprobe intelligently adds or removes a module from the Linux kernel
+
+* modprobe jfs ==> install jfs module
+
+* -r ==> remove a module on the kernel
+
+* find /lib/modules/$(uname -r) -type f -name '*.ko' ==> to all of the linux kernel moduels
+
+* lsmod | grep modulename ==> to find module installed or not
+
+* rmmod MODULE-NAME(exmp:jfs) ==> to remove a module
+
+---
+
 # **Tmux**
 
 ---
