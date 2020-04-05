@@ -705,6 +705,38 @@ just cut a part of file for example uernames in passwd files
 
 ---
 
+# **Grub(GNU GRand Unified Bootloader)**
+
+---
+
+* default linux boot loader
+
+* we can see and edit grub configuration file in /etc/default/grub
+
+* to show grub we should comment GRUB_HIDDEN_TIMEOUT=0 and GRUB_HIDDEN_TIMEOUT_QUIET=true(In ubuntu)
+
+* to use the changes we should use below command:
+  * update-grub
+
+---
+
+# Menuing system
+
+* we can find menuing system in /etc/grub.d
+
+* we can insert a custom option without editing these files
+
+* We can add our menu entry by using **cp 10_linux 15_mylinux** and then vim 15_menu and add this line:
+`echo "Adding 15_mylinux" >&2`and when we use `update-grub` we can see Adding 15_mylinux
+  * result when we reboot the system we can see 2 same thing like below:
+  * ubuntu
+  * ubuntu advanced options
+  * ubuntu
+  * ubuntu advanced options
+  * ...
+
+---
+
 # **Tmux**
 
 ---
