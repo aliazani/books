@@ -749,6 +749,23 @@ just cut a part of file for example uernames in passwd files
 
 ---
 
+# **Diffrentiate and optimize storage and input**
+
+---
+
+* we can see the storage and inputs in /dev
+
+* sr ==> is usually for disk drive
+
+* fd ==> usually for floppy drive
+
+* for permanent mount a device we should use /etc/fstab
+
+* df -h ==> disk free
+  * -h ==> human readable
+
+---
+
 # **Tmux**
 
 ---
