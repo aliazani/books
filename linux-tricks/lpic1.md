@@ -68,6 +68,16 @@ marp: true
 
 ---
 
+# to highlight the searched element in vim with color
+
+* run these command in command mode:
+
+1. set hlsearch
+2. hi Search ctermbg=LightYellow
+3. hi Search ctermfg=Red
+
+---
+
 # Search and replace in vim
 
 ## search ==> /NAME or ?NAME
@@ -472,7 +482,7 @@ And this is much same as root
 
 * egrep 'hello.*world' file
   * . ==> every char
-  * \* ==> 1 to unlimit
+  * \* ==> up to 0
 * egrep 'hello | world' file ==> lines have hello or world
   * | ==> or
 * -v ==> not match patterns(versus)
@@ -660,6 +670,8 @@ just cut a part of file for example uernames in passwd files
 * lspci -n ==> remove the name of pci
 
 * -x ==> gives us increasing level of hexadecimal
+
+---
 
 * -b ==> shows us our pci bridges
 
