@@ -761,8 +761,48 @@ just cut a part of file for example uernames in passwd files
 
 * for permanent mount a device we should use /etc/fstab
 
+* each storage in fstab has UUID(universally unique identifier)
+
+* blkid ==> to see the uuid
+
+* or we can cd /dev/disk/by-uuid and see the files there by ls -la
+
 * df -h ==> disk free
   * -h ==> human readable
+
+---
+
+# **Hot and Cold plug Devices**
+
+---
+
+# cold devices
+
+* any device can only connected or disconnected when powered off
+
+* connecting or disconnecting one of these devices can damage the device or computer at worst and won't work at all at best
+
+* Each of these devices will be present as a file(when working or recognized) in the special /dev directory(Remeber, even hardware in linux treated as a file or folder)
+
+* Only the kernel itself can talk directly to hardware, through a module/driver or built-in(complied) support.
+
+* cpu, memory, non-usb storage devices, pci expansion card(network, video, sound, etc)
+
+---
+
+# Hot devices
+
+* can be connected or disconnected at any time
+
+* devices can be added or removed dynamically cannot be listed in filesystem
+
+* has an entry created in /dev when it is detected
+
+* USB Hard Drive, Usb memory stick, some firewire devices, input devices(scanner, Printers)
+
+* HAL (Hardware Abstraction Layer) ==> picking up this hot devices and reacting to them(recognize and loading a module or logging it as unrecognized)
+
+* DBUS(Desktop BUS) ==> responsible for telling other process about the newly discovered device
 
 ---
 
