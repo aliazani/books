@@ -225,7 +225,7 @@ And this is much same as root
 * Here is the guide for this:
 * ![cron](./cron.png)
 * And we have this sample : # m h  dom mon dow   command
-  * if we say ***** mkdir /home/ali/Desktop/new
+  * if we say * * * * * mkdir /home/ali/Desktop/new
     * It will make new directory every min
 
 ---
@@ -234,7 +234,7 @@ And this is much same as root
 * For n to m ==> n-m
 * For n and m ==> n,m
 * Example:
-  * */20 2-4 ** fri,sun
+  * */20 2-4 * * fri,sun
   This will run the job every 20 min in 2 to 4 Am every friday and every sunday
 
 ---
@@ -590,7 +590,7 @@ just cut a part of file for example uernames in passwd files
 
 ---
 
-# Proc
+# Proc(Programmed Random OCcurence)
 
 * /proc is linked to kernel and virtual file
 * /proc is for proccess are running in our system
@@ -627,7 +627,7 @@ just cut a part of file for example uernames in passwd files
 
 * This directory is for variables
 
-* You can store things you don't need them after reboot in the /tmp which is in the /var directory
+* You can store things you don't need them after reboot in the /tmp or  /var/tmp directory
 
 * You can see the system log in /var/log that changes after every reboot
 
@@ -803,6 +803,26 @@ just cut a part of file for example uernames in passwd files
 * HAL (Hardware Abstraction Layer) ==> picking up this hot devices and reacting to them(recognize and loading a module or logging it as unrecognized)
 
 * DBUS(Desktop BUS) ==> responsible for telling other process about the newly discovered device
+
+---
+
+# **Determine hardware device resources**
+
+---
+
+* /proc is for the proccess that are running
+
+* /proc is a virtual file system that contains the files and references to all the devices and resources
+
+* cat /proc/mounts ==> to see all the file systems that mount on my system
+
+* cat /proc/cpuinfo ==> to see the information of cpu
+
+* cat /proc/iomem ==> to see all of the memory locations that are curently in use on a system
+
+* for external devices we plug to the system , we use ==> /proc/irq that allocate some settings to system when we plug some device
+
+* so we can use hardware device resources in /proc too for example: interrupts, modules, version
 
 ---
 
