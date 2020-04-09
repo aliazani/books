@@ -910,6 +910,36 @@ just cut a part of file for example uernames in passwd files
 
 ---
 
+# **init**
+
+---
+
+* There are 2 types of run levels
+
+* Run levels goes from 1 to 6
+
+* init levels:
+  0. level 0 ==> Halt(Shuts down system)
+  1. level 1 ==> Single-User Mode (Does not configure network interfaces, start daemons, or allow non-root logins)
+  2. level 2 ==> Multi-User Mode (Does not configure network interfaces or start daemons)
+  3. level 3 ==> Multi-User Mode with Networking (Starts the system normally)
+  4. level 4 ==> Undefined (Not used/User-definable)
+  5. level 5 ==> X11 (As runlevel 3 + display manager(X) )
+  6. level 6 ==> Reboot (Reboots the system)
+
+---
+
+* ls -al /sbin *nit ==> show us the init and telinit
+
+* we should use the telinit to change run level for maintain compatibilities
+
+* telinit LEVEL-INIT ==> to change run level
+  * exmp: telinit 4 ==> to change the run level to undefined
+
+* telinit is the same and safe way for init
+
+---
+
 # **Tmux**
 
 ---
