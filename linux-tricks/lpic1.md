@@ -28,9 +28,7 @@ marp: true
 
 ---
 
-# command
-
-* ls ==> to show us the list of our files
+* ls (list) ==> to show us the list of our files
 * vi ==> This is wonderfull text editor in linux
 
 ---
@@ -128,8 +126,6 @@ marp: true
 # **user and groups**
 
 ---
-
-# commands
 
 * sudo ==> allows us to run a command as superuser(root)
 * cat ==> to read the file content on terminal or concatenate text
@@ -361,8 +357,6 @@ And this is much same as root
 # **System Resources**
 
 ---
-
-# commands
 
 * top (htop) ==> to monitor the system resources
   * shift + m ==> sort by memory
@@ -882,6 +876,37 @@ just cut a part of file for example uernames in passwd files
 * /usr(Unix System Resources) ==> the second readonly hierarchy primary for users data and contains the majority of multi-users utilities and applications and has non-essential sub-directories under it
 
 * /var(variable) ==> contains files to which the system writes data during the course of its operations and they will changes by time
+
+---
+
+# **Boot Proccess**
+
+---
+
+* There are 2 way to see the boot messages directory:
+  * /var/log
+  * dmesg ==> command to see the boot proccess
+* /var/log/messages ==> the informations about post boot
+
+---
+
+![boot_proccess](./boot_proccess.png)
+
+* BIOS ==> is resposible for direct access to all of the hardware that's installed on our system
+
+* Master boot record ==> it's generally installed on the 0's sector of the hard-drive and it's responsible for identifying where your boot loader is installed
+
+---
+
+# Grub
+
+* e ==> to see the premeters you can pass to grub
+  * like kernel path, the partition you use, and boot image
+  * then if you hit **e** agian , you can edit the parameter
+
+* we can force kernel to boot a single user by:
+  * press e in the kernel
+  * and pass the init=/bin/bahs or init=signle at the end of the line
 
 ---
 
