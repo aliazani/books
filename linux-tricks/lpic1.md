@@ -78,6 +78,16 @@ marp: true
 
 ---
 
+# Some tricks
+
+* :vs  ==> to split the terminal vertically
+
+* :terminal ==> to open a terminal
+
+* :split or :sp ==> to split terminal horizentally
+
+---
+
 # Search and replace in vim
 
 ## search ==> /NAME or ?NAME
@@ -136,7 +146,7 @@ marp: true
 
 # to give all priviledges to a user in visudo
 
-#### write username under the root user and done it's like this
+## write username under the root user and done it's like this
 
 # User privilege specification
 
@@ -181,7 +191,7 @@ And this is much same as root
 * **-** (rw-) (r-x) (r-x)
   * **\-** ==> means it's a file
 
-### in file permissions we have 3 groups
+## in file permissions we have 3 groups
 
 1. Owner of file
 2. Member of groups
@@ -225,7 +235,7 @@ And this is much same as root
 * Here is the guide for this:
 * ![cron](./cron.png)
 * And we have this sample : # m h  dom mon dow   command
-  * if we say * * * * * mkdir /home/ali/Desktop/new
+  * if we say \* \* \* \* \* mkdir /home/ali/Desktop/new
     * It will make new directory every min
 
 ---
@@ -234,7 +244,7 @@ And this is much same as root
 * For n to m ==> n-m
 * For n and m ==> n,m
 * Example:
-  * */20 2-4 * * fri,sun
+  * */20 2-4 \* \* fri,sun
   This will run the job every 20 min in 2 to 4 Am every friday and every sunday
 
 ---
@@ -328,7 +338,7 @@ And this is much same as root
 # **yum**
 
 * To add repos ==> cd /etc/yum.repoes.d and you can find them there
-* yum update ==>update and ask for upgrade
+* yum update ==> update and ask for upgrade
 * yum check-update ==> to see if updates are available
 * yum search PACK ==> to search for a package
 * yum upgrade ==> to upgrade all the packages
@@ -536,7 +546,7 @@ just cut a part of file for example uernames in passwd files
   3. sed '/fulltime/w new.txt' ==> search for fulltime and write them in new.txt file
   4. sed '/fulltime/w new.txt' > /dev/null ==> same as 3 but not show any thing
   5. sed '0,/parttime/s/parttime/promotion/' ==> search and replace just the first parttime with promotion
-  6. sed 's/<[^>]*>//' filename ==> remove <html> and <body>
+  6. sed 's/<[^>]*>//' filename ==> remove \<html> and \<body>
   * [^c] ==> will match all character except for the one mentioned in braces(c)
   * s ==> substitute
   * w ==> write
@@ -553,7 +563,7 @@ just cut a part of file for example uernames in passwd files
 * -a ==> append (default is write and overwrite)
 * look at the bellow results:
 
-1. $ls
+* $ls
   file1
 
     $ls > file2
@@ -564,7 +574,7 @@ just cut a part of file for example uernames in passwd files
 
 ---
 
-2. $ls | tee file3
+* $ls | tee file3
     file1
     file2
     file3
@@ -823,6 +833,55 @@ just cut a part of file for example uernames in passwd files
 * for external devices we plug to the system , we use ==> /proc/irq that allocate some settings to system when we plug some device
 
 * so we can use hardware device resources in /proc too for example: interrupts, modules, version
+
+---
+
+# **FHS(File Hierarchy System)**
+
+---
+
+* visually show file hierarchy system
+
+![hierarchy](./hierachy_system.png)
+
+---
+
+* We can find commands like ls , cat , ... ==> in /bin
+
+* **/** ==> is the root of standard hierarchy system(primary hierarchy)
+
+* our boot files like kernel in ==> /boot
+
+* our devices are in like hard-drive, cdrom , ... ==> /dev
+
+* host settings specific configuration files ==> /etc
+  * in early version of unix Bell-Labs refer etc directory which  helds everythings did not belongs anywhere-else , it was just a place put stuff but this directory redisgned and now it includes editable text configuration
+
+* /home ==> is the home for each user
+
+* /home/lib ==> is the libraries for /bin programes
+
+---
+
+* /media ==> is for removable devices like CD, DVD, usb, ...
+
+* /opt ==> the installation of add-on application software packages
+
+* /proc ==> kernel and hardware devices resources to see the informations and proccesses(PID)
+
+* /root ==> the home directory for root
+
+* /sbin ==> system binary
+
+* /stv ==> Serve folder. It holds site specific data to be served by the system for protocols such as, ftp, rsync, www, cvs etc.
+
+* /tmp ==> temporary files
+
+---
+
+* /usr(Unix System Resources) ==> the second readonly hierarchy primary for users data and contains the majority of multi-users utilities and applications and has non-essential sub-directories under it
+
+* /var(variable) ==> contains files to which the system writes data during the course of its operations and they will changes by time
 
 ---
 
