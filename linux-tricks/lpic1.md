@@ -919,13 +919,13 @@ just cut a part of file for example uernames in passwd files
 * Run levels goes from 1 to 6
 
 * init levels:
-  0. level 0 ==> Halt(Shuts down system)
-  1. level 1 ==> Single-User Mode (Does not configure network interfaces, start daemons, or allow non-root logins)
-  2. level 2 ==> Multi-User Mode (Does not configure network interfaces or start daemons)
-  3. level 3 ==> Multi-User Mode with Networking (Starts the system normally)
-  4. level 4 ==> Undefined (Not used/User-definable)
-  5. level 5 ==> X11 (As runlevel 3 + display manager(X) )
-  6. level 6 ==> Reboot (Reboots the system)
+  1. level 0 ==> Halt(Shuts down system)
+  2. level 1 ==> Single-User Mode (Does not configure network interfaces, start daemons, or allow non-root logins)
+  3. level 2 ==> Multi-User Mode (Does not configure network interfaces or start daemons)
+  4. level 3 ==> Multi-User Mode with Networking (Starts the system normally)
+  5. level 4 ==> Undefined (Not used/User-definable)
+  6. level 5 ==> X11 (As runlevel 3 + display manager(X) )
+  7. level 6 ==> Reboot (Reboots the system)
 
 ---
 
@@ -937,6 +937,84 @@ just cut a part of file for example uernames in passwd files
   * exmp: telinit 4 ==> to change the run level to undefined
 
 * telinit is the same and safe way for init
+
+---
+
+# **File naming basics and file commands**
+
+---
+
+* mkdir NAME ==> to create a directory NAME
+
+* file names, file extensions and linux are case sensitive
+  * for exmp: if we create file.txt , file.TXT and FILE.txt ,these are three seprate and different files
+
+* we can edit or create files with space by 2 trick:
+  * use \ before each space
+    * exmp: vi this\ file\ has\ space ==> to create single file `this file has space`
+  
+  * use  \' file name \' or \" file name\"
+
+* the limit for file name is 256 character and we can't create a file with more than 256 char in most file systems
+
+---
+
+* touch .file-name ==> to create a dot file that can't seen by normal ls command and we should use ls -a(all) to see them actually they are a kind of hidden files and most of them are configuration files
+
+---
+
+# wild cards
+
+* ? ==> single character
+  * exmp-1: ls bac? ==> list every thing starts with bac[a - z, 0-9]
+  * exmp-2: nano b??k ==> if we have 3 file: book, back, balk; it will open all 3 files
+
+* \* ==> it means everything (0-unlimit in regex)
+  * exmp: nano b*k ==> if we have 3 file: book, back, balk; it will open all 3 files
+
+* [CHARACTERS] ==> match any characters in a set of bracket
+  * exmp: if we have 4 files: cat, rat, fat, hat; ls [crh]at will list 3 files cat, rat, hat
+  * exmp-2: if we have 4 files: cat, rat, fat, hat; ls [a-z]at ; list all 4 files(all files starts with char a to z and end with at)
+
+---
+
+# ls(list)
+
+* -l ==> for long list
+
+* -t ==> sort by time modification time
+
+* -h ==> human-readable
+
+* -s ==> sort by size
+
+* -r ==> reverse the llist
+
+* -d ==> list of directories
+
+* -a ==> list all the files include dot-files(.file)
+
+* -F (--classify) ==> append indicator (one of */=>@|) to entries
+
+* -R ==> recursive, it shows the directories content too
+
+---
+
+# cp(copy)
+
+* cp -FLAG file-name destination ==> the base of cp command
+
+* -i ==> interactive (prompt before overwrite)
+
+* -f ==> force
+
+* -R or -r ==> recursive
+
+* -p ==> preserve the ownership
+
+* -a ==> archive
+
+* -u ==> This stands for update and copies only when the source file is newer than the destination
 
 ---
 
