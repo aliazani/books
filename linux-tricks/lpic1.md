@@ -1018,6 +1018,72 @@ just cut a part of file for example uernames in passwd files
 
 ---
 
+# **Compress files**
+
+---
+
+# gzip
+
+* gzip file1 ==> compress file1 and replace it with gzip file
+
+* --stdout, -c ==> write on standard output
+
+* -d ==> decompress
+
+* -f ==> force
+
+* -k(--keep) ==> to keep original file and create compressed file
+
+* -r ==> recursive
+
+* -1(--fast) ==> fast compression
+
+* -9(--best) ==> best compression
+
+---
+
+# gunzip
+
+* gunzip file1.gz ==> decompress the file1.gz and replace it with extracted file
+
+* --stdout, -c ==> write on standard output
+
+* -f ==> force
+
+* -k(--keep) ==> to keep original file and create compressed file
+
+* -r ==> recursive
+
+---
+
+# tar
+
+* It's for archive and compress files
+
+* tar -cJf file.xz file* ==> to create xz archive and compress it
+
+* -x ==> extract
+
+* -J ==> xz
+
+* -j ==> bzip2
+
+* -z ==> gzip
+
+* -a ==> auto-compress
+
+---
+
+* -f ==> file
+
+* -c ==> create or compress
+
+* -r(--append) ==> append
+
+* -t(--list) ==> list of files in tar file
+
+---
+
 # **Tmux**
 
 ---
