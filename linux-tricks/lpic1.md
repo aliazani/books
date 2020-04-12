@@ -1136,7 +1136,7 @@ just cut a part of file for example uernames in passwd files
 
 * It's a seprate file
 
-* can't be use in different file systems and Link across filesystem
+* can't be use in different file systems and Link across filesystem( because of same incode)
 
 * Can not use hard link for directories
 
@@ -1165,6 +1165,12 @@ just cut a part of file for example uernames in passwd files
 ---
 
 # **copy vs links**
+
+---
+
+* soft link would not use any spaces on the storage so it help us save our storage
+
+* hard link will use our storage but if we remove the original file , the linked file will work properly and keep in mind if we change 1 file , the other file will be change and this is the option copy doesn't have it.
 
 ---
 
