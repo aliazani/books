@@ -1,5 +1,5 @@
 ---
-marp: true
+marp: false
 ---
 <!-- backgroundColor: #F0000 -->
 
@@ -331,7 +331,7 @@ And this is much same as root
 
 ---
 
-# **yum**
+# **yum or dnf**
 
 * To add repos ==> cd /etc/yum.repoes.d and you can find them there
 * yum update ==> update and ask for upgrade
@@ -419,7 +419,7 @@ And this is much same as root
 
 ---
 
-# **10: Streams**
+# **Streams**
 
 ---
 
@@ -898,7 +898,7 @@ just cut a part of file for example uernames in passwd files
 
 ---
 
-# Grub
+# Grub(GRand Unified Bootloader)
 
 * e ==> to see the premeters you can pass to grub
   * like kernel path, the partition you use, and boot image
@@ -906,7 +906,7 @@ just cut a part of file for example uernames in passwd files
 
 * we can force kernel to boot a single user by:
   * press e in the kernel
-  * and pass the init=/bin/bahs or init=signle at the end of the line
+  * and pass the init=/bin/bash or init=signle at the end of the line
 
 ---
 
@@ -1108,9 +1108,11 @@ just cut a part of file for example uernames in passwd files
 
 * It's a special file type
 
+* **l** rwx rwx rwx ==> first l show us it's soft link
+
 * Kind of shortcut to file location and is a bit slower than hard links
 
-* We can use for different file systems
+* We can use for different file systems( Beacause of different inode)
 
 * Removing or moving soft link doesn’t affect anything but removing original file, the link becomes “dangling” link which points to nonexistent file.  
 
@@ -1136,6 +1138,8 @@ just cut a part of file for example uernames in passwd files
 
 * It's a seprate file
 
+* **\-** rwx rwx rwx ==> - show us it's regular file
+
 * can't be use in different file systems and Link across filesystem( because of same incode)
 
 * Can not use hard link for directories
@@ -1147,8 +1151,6 @@ just cut a part of file for example uernames in passwd files
 * Makes any changes to 1 file will affect for both files(original file and linked file)
 
 ---
-
-* ln -P(--physical) FILE-NAME LINKED-FILE
 
 * hard links always refer to the source, even if moved or removed.
 
