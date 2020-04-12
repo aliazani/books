@@ -1084,6 +1084,90 @@ just cut a part of file for example uernames in passwd files
 
 ---
 
+# cpio
+
+* 
+
+---
+
+# **Links**
+
+---
+
+# links
+
+* A link in UNIX is a pointer to a file. Like pointers in any programming languages, links in UNIX are pointers pointing to a file or a directory. Creating links is a kind of shortcuts to access a file. Links allow more than one file name to refer to the same file, elsewhere.
+
+---
+
+![hard_vs_soft](./hard_link_vs_soft_link.png)
+
+---
+
+# soft(symbolic) link
+
+* It's a special file type
+
+* Kind of shortcut to file location and is a bit slower than hard links
+
+* We can use for different file systems
+
+* Removing or moving soft link doesn’t affect anything but removing original file, the link becomes “dangling” link which points to nonexistent file.  
+
+* Link across filesystems: If you want to link files across the filesystems, you can only use symlinks/soft links(You can't create hard link to cdrom or external hard)
+
+---
+
+* soft links contains the path for original file and not the contents
+
+* original file and linked file has different inode number
+
+* As similar to hard links, any changes to the data in either file is reflected in the other
+
+* ln  -s [original filename] [link name]
+
+* ln -is [new original filename] [link name] ==> to change to new link with ask
+
+* ln -fs [new original filename] [link name] ==> to change to new link with no asking
+
+---
+
+# hard link
+
+* It's a seprate file
+
+* can't be use in different file systems and Link across filesystem
+
+* Can not use hard link for directories
+
+* reference to the core file
+
+* removing original file, does not effect to the linked file
+
+* Makes any changes to 1 file will affect for both files(original file and linked file)
+
+---
+
+* ln -P(--physical) FILE-NAME LINKED-FILE
+
+* hard links always refer to the source, even if moved or removed.
+
+* if we move the source file of hard links they will work correctly
+
+* original file and linked file has same inode number
+
+* ln  [original filename] [link name] or ln -P [original filename] [link name]
+
+* ln -i [new original filename] [link name] ==> to change to new link with ask
+
+* ln -f [new original filename] [link name] ==> to change to no asking
+
+---
+
+# **copy vs links**
+
+---
+
 # **Tmux**
 
 ---
