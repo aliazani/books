@@ -1,5 +1,5 @@
 ---
-marp: false
+marp: true
 ---
 <!-- backgroundColor: #F0000 -->
 
@@ -1173,6 +1173,62 @@ just cut a part of file for example uernames in passwd files
 * soft link would not use any spaces on the storage so it help us save our storage
 
 * hard link will use our storage but if we remove the original file , the linked file will work properly and keep in mind if we change 1 file , the other file will be change and this is the option copy doesn't have it.
+
+---
+
+# **Permissions in linux**
+
+---
+
+* sh PROGRAM.sh ==> to run shell programmes
+
+* we have 12 bits for permission for each file or directory or link(every type file in linux)
+
+* 0(suid) 0(sgid) 0(sticky bit) rwx rwx rwx
+
+---
+
+# suid(set user id)
+
+* It's for executable files
+
+* run the program with permission of owner of the file
+
+* These permissions allow the file being executed to be executed with the privileges of the owner. For example, if a file was owned by the root user and has the setuid bit set, no matter who executed the file it would always run with root user privileges
+
+* can't use it for directories
+
+* -rws rwx rwx
+  * x user to S ==> if we don't have execute permission
+  * x user to s ==> if we have execute permission
+
+* chmod u+s or 4\-\-\- FILE-NAME ==> to set uid
+
+---
+
+# sgid(set Group id)
+
+* When the Set Group ID bit is set, the executable is run with the authority of the group. For example, if a file was owned by the users’ group, no matter who executed that file it would always run with the authority of the user’s group.
+
+* When the setgid bit is set on a directory, all files created within said directory inherit the group ownership of that directory. For example, the folder1 folder is owned by the user user1, and the group group1
+
+* -rwx rws rwx
+  * x user to S ==> if we don't have execute permission
+  * x user to s ==> if we have execute permission
+
+* chmod g+s or 2\-\-\- FILE-NAME ==> to set uid
+
+---
+
+# Sticky bit
+
+* When the sticky bit is set on a directory, only the root user, the owner of the directory, and the owner of a file can remove files within said directory
+
+* -rwx rwx rwt
+  * x user to X ==> if we don't have execute permission
+  * x user to x ==> if we have execute permission
+
+* chmod o+t or 1\-\-\- FILE-NAME ==> to set uid
 
 ---
 
