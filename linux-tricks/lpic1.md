@@ -206,11 +206,11 @@ And this is much same as root
 ## rwx
 
 * x = 2^0 = 1
-  * or [u(user) | g(group) | o(others)] [+ | -] x
+  * or [u(user) | g(group) | o(others)| a(all)] [+ | -] x
 * w = 2^1 = 2
-  * or [u(user) | g(group) | o(others)] [+ | -] w
+  * or [u(user) | g(group) | o(others)| a(all)] [+ | -] w
 * r = 2^2 = 4
-  * or [u(user) | g(group) | o(others)] [+ | -] r
+  * or [u(user) | g(group) | o(others) | a(all)] [+ | -] r
 
 ---
 
@@ -1229,6 +1229,65 @@ just cut a part of file for example uernames in passwd files
   * x user to x ==> if we have execute permission
 
 * chmod o+t or 1\-\-\- FILE-NAME ==> to set uid
+
+---
+
+# **permissions**
+
+---
+
+# newgrp
+
+* groupadd GROUP-NAME ==> to add new group
+
+* newgrp GROUP-NAME ==> The newgrp command is used to change the current real group ID to the specified group during a login session
+
+---
+
+# umask
+
+* the umask command returns, or sets, the value of the system's file mode creation mask
+
+* -S ==> Accept a symbolic representation of a mask, or return one
+
+* umask [u | g | o] [+- r | w | x] or umask \[0-7]\[0-7]\[0-7]
+
+* umask u=rwx,g=rwx,o=rwx
+
+* $umask
+  022 ==> it's the default permission for most linux systems
+
+* In Linux, the default permissions value is 666 for a regular file, and 777 for a directory
+
+---
+umask digit == default file permissions == default directory permissions
+**0** == rw == rw**x**
+1 == rw == rw
+**2** == r == r**x**
+3 == r == r
+**4** == w == w**x**
+5 == w == w
+6 == x == (no permission allowed)
+7 == (no permission allowed) == (no permission allowed)
+
+---
+
+# chattr(change attribute) and lsattr(list attribute)
+
+* chattr command modifies the attributes of files, and lsattr lists (displays) them
+
+* a (append only) ==>  The file may only be opened for writing in append mode: its existing data may not be overwritten. It cannot be deleted or renamed; hard links cannot be made to this file; most of its metadata cannot be changed. Modifying this attribute requires root privileges
+
+* A (no atime updates) ==> When the file is accessed, its atime record is not modified, which in some situations can reduce disk I/O.
+
+* c (compressed) ==> Files with this attribute are automatically compressed by the kernel when written to disk. Its contents are uncompressed when read. Note: This attribute has no effect in the ext2, ext3, and ext4 filesystems.
+
+* s (secure deletion) ==> If a file with this attribute is deleted, its data is overwritten with zeroes, similar to a simple shred. This attribute is ignored by ext2, ext3, and ext4 filesystems.
+
+---
+
+* i (immutable) ==> Files with this attribute cannot be deleted or renamed; hard links cannot be made to this file; most of its metadata cannot be changed; data cannot be written to the file. Modifying this attribute requires root, or a process with the CAP_LINUX_IMMUTABLE capability, as set with setcap
+ 
 
 ---
 
