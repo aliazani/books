@@ -380,6 +380,18 @@ And this is much same as root
 
 * This tool is indexing all of the files and is faster than find commnad but less flexibale
 
+* /etc/updatedb.conf ==> is the configuration for updatedb command
+  
+  * BIND_MOUNT ==> allows us to mount all or part of another file system
+
+  * PRUNE_BIND_MOUNT ==> ignore bind mount points
+  
+  * PRUNE_FS ==> the file systems we want ignore them
+
+  * PRUNE_NAME ==> the extension or name we want ignore them like .git
+
+  * PRUNE_PATH ==> the path we don't want to index them by updatedb and we want to ignore them
+
 ---
 
 # find
