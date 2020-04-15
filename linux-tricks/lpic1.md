@@ -1254,6 +1254,8 @@ just cut a part of file for example uernames in passwd files
 
 * umask u=rwx,g=rwx,o=rwx
 
+* we can't set x(execute) for files with umask
+
 * $umask
   022 ==> it's the default permission for most linux systems
 
@@ -1276,18 +1278,34 @@ umask digit == default file permissions == default directory permissions
 
 * chattr command modifies the attributes of files, and lsattr lists (displays) them
 
+* attributes list:
+append only (a), no atime updates (A), compressed (c), no copy on write (C), no dump (d), synchronous directory updates (D), extent format (e), immutable (i), data journalling (j), project hierarchy (P), secure deletion (s), synchronous updates (S), no tail-merging (t), top of directory hierarchy (T), and undeletable (u).
+
+* For more details go to [wikipedia link](https://en.wikipedia.org/wiki/Chattr)
+
+---
+
 * a (append only) ==>  The file may only be opened for writing in append mode: its existing data may not be overwritten. It cannot be deleted or renamed; hard links cannot be made to this file; most of its metadata cannot be changed. Modifying this attribute requires root privileges
 
 * A (no atime updates) ==> When the file is accessed, its atime record is not modified, which in some situations can reduce disk I/O.
 
-* c (compressed) ==> Files with this attribute are automatically compressed by the kernel when written to disk. Its contents are uncompressed when read. Note: This attribute has no effect in the ext2, ext3, and ext4 filesystems.
+---
 
-* s (secure deletion) ==> If a file with this attribute is deleted, its data is overwritten with zeroes, similar to a simple shred. This attribute is ignored by ext2, ext3, and ext4 filesystems.
+* C (no copy on write) ==> Files with this attribute are not subject to copy-on-write updates. If this attribute is set on a directory, new files created in that directory will have this attribute set. Note: This attribute is only effective on filesystems which perform copy-on-write. On btrfs, this attribute should be set on new or empty files. If this attribute is set after a btrfs file already contains data, the time when its data will be stable is undefined
+
+* cp --reflink file1 /new/file1 ==> copy-on-write for file1 , this feature share data blocks for file1 and copy of it and save a lot of space in our disk and if we change paort of a copied file1 , it will allocate the size of changes to it
 
 ---
 
+* e (block extents) ==> Indicates that a file should be stored using block extents. Data is stored contiguously between two blocks, and only those two blocks must be known to find the file's data. Block extent mapping may potentially save disk space, because it reduces the number of blocks which must be listed in the file's inode.
+
 * i (immutable) ==> Files with this attribute cannot be deleted or renamed; hard links cannot be made to this file; most of its metadata cannot be changed; data cannot be written to the file. Modifying this attribute requires root, or a process with the CAP_LINUX_IMMUTABLE capability, as set with setcap
- 
+
+---
+
+* s (secure deletion) ==> If a file with this attribute is deleted, its data is overwritten with zeroes, similar to a simple shred. This attribute is ignored by ext2, ext3, and ext4 filesystems
+
+* u (undeletable) ==> When a file with this attribute is deleted, its contents are saved, enabling their later undeletion. Undelete tools which can take advantage of this attribute include extundelete.
 
 ---
 
