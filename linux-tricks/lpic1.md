@@ -374,10 +374,58 @@ And this is much same as root
 
 ---
 
-# Command
+# locate
 
-* locate ==> first you should use updatedb to update the database of files
-* find /etc -name '*motd\*'==> most powerful command to find files like motd in /etc
+* locate ==> first you should use **updatedb** to update the database of files
+
+* This tool is indexing all of the files and is faster than find commnad but less flexibale
+
+---
+
+# find
+
+* find DIRECTORY-TO-SEARCH -name NAME-OF-FILE
+
+  * find /etc -name '*motd\*'==> most powerful command to find files like motd in /etc
+
+* -name ==> name of file
+
+* -perm ==> permission of file
+
+* -size ==> size of file
+  * M ==> mega-byte
+  * G ==> giga-byte
+
+* maxdepth ==> depth of search (sub directories level)
+
+* -uid ==> files is owned by userid
+
+* -gid ==> files is owned by group id
+
+* -group ==> files is owned by group name
+
+* -user ==> files is owned by user name
+
+---
+
+# whereis
+
+* search for binary, man page and libraries files and directories
+
+---
+
+# which
+
+* only search the PATH location
+
+---
+
+# type
+
+* type COMMAND ==> will show us how command will interpreted
+  * for example:
+  * type type ==> type is a shell builtin  
+  * type ls ==> ls is an alias for ls --color=tty
 
 ---
 
