@@ -1369,6 +1369,26 @@ append only (a), no atime updates (A), compressed (c), no copy on write (C), no 
 
 ---
 
+# **touch**
+
+---
+
+* touch command used to create, change and modify timestamps of a file
+
+* stat FILE-NAME ==> to see the status of a file
+
+* -a ==> change the access time
+
+* -c ==> don't create any files
+
+* -m ==> change only modification time
+
+* -r ==> refrence file
+
+* -c ==> don't create any file
+
+---
+
 # **Tmux**
 
 ---
