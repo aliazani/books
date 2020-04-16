@@ -1369,6 +1369,46 @@ append only (a), no atime updates (A), compressed (c), no copy on write (C), no 
 
 ---
 
+# **dd**
+
+---
+
+* Stands for: Copy and convert (called dd because cc is already in use by C compiler)
+
+* dd can be used for tasks such as backing up the boot sector of a hard drive, and obtaining a fixed amount of random data
+
+* if ==> input file
+
+* of ==> output file
+
+* ibs ==> read up Bytes at a time
+
+* obs ==> write Bytes at a time
+
+---
+
+* skip=N ==>  skip N ibs-sized blocks at start of input
+
+* seek=N ==> skip N obs-sized blocks at start of output
+
+* bs ==> the number of bytes that will read and write
+  * M ==> mega byte
+  * G ==> giga byte
+
+* count ==> the count of bs to copy
+
+---
+
+* sudo dd if=/dev/sda of=./mbr.iso bs=512 count=1 ==> back the master boot record
+
+* sudo dd if=/dev/sda1 of=./harddisk.iso bs=5M count=1 ==> back the harddisk
+
+* dd if=/dev/zero of=./zeros bs=1M count=1 ==> create a file named zeros that filled with zero and it's size is 1 mega bytes
+
+* dd if=/dev/random of=./randomfile  count=1 ==> create a file named randomfile that filled with random characters
+
+---
+
 # **touch**
 
 ---
