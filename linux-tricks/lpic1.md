@@ -1429,6 +1429,44 @@ append only (a), no atime updates (A), compressed (c), no copy on write (C), no 
 
 ---
 
+# **Software libraries**
+
+---
+
+* ldconfig is used to create, udpate and remove symbolic links for the current shared libraries based on the lib directories present in the /etc/ld.so.conf
+
+* Only .conf files need the include keyword. when adding a library location you will not use the include statement
+
+* .so ==> stands for shared object
+
+* By default, libraries are located in /usr/local/lib, /usr/local/lib64, /usr/lib and /usr/lib64; system startup libraries are in /lib and /lib64
+
+* ldconfig ==> clears and reconfigure cash for shared libraries
+
+* ldd PROGRAM_NAME ==> we can* see the library depencies
+  * Example: ldd /bin/ls
+
+
+---
+
+* **temporary add a software library**
+  * we should create our directory own libarary in /usr/local/ and create our shared library into it
+
+  * we can export the library for our shell temporary with:
+export LD_LIBRARY_PATH=/usr/lib/new-library ==> we don't need run ldconfig
+
+  * we can add multiple library with using like below:
+export LD_LIBRARY_PATH=/usr/lib/new-library:/usr/lib/new-lib2 ==> we don't need run ldconfig
+
+* **permanent add a software library**
+  * for permanently add a library to our shared library we can add the library to /etc/ld.so.conf ==>  and then we should run ldconfig to reindex and refresh the shared libraries
+
+---
+
+
+
+---
+
 # **Tmux**
 
 ---
