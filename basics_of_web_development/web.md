@@ -66,4 +66,12 @@ In HTML 5, the declaration is simple
 
 * \<img src="Source file path or url" alt="alternative text if image doesn't appear" height="hight number(32)" width="width number(32)"> ==> to insert image to our webpage
 
-* 
+---
+
+# Anchor tag
+
+* The \<a> tag defines a hyperlink, which is used to link from one page to another
+
+* Example:  \<a href="https://www.w3schools.com">Visit W3Schools.com!</a>
+
+* By default index.html is the main file(first html file or homepage)
