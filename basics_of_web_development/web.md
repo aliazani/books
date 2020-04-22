@@ -75,3 +75,13 @@ In HTML 5, the declaration is simple
 * Example:  \<a href="https://www.w3schools.com">Visit W3Schools.com!</a>
 
 * By default index.html is the main file(first html file or homepage)
+
+---
+
+* \<form> ==> form tag to create form
+
+* \<input type="TYPE"> ==> to get input in our form and it's self closing tag
+
+* input types: text, password, submit, reset, checkbox, color, date, email, file, hidden, image, radio, url, search , ...
+
+* 
