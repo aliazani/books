@@ -1463,7 +1463,56 @@ export LD_LIBRARY_PATH=/usr/lib/new-library:/usr/lib/new-lib2 ==> we don't need 
 
 ---
 
+# **ps(process status)**
 
+---
+
+* reads this information from the virtual files in /proc   filesystem
+
+* ps ==> show the processes that are running for the current shell
+
+* ps w ==>  Wide output. Use this option twice for unlimited width
+
+* ps -e | ps -A | ps aux ==> show all the process on the system
+
+* ps aux ==> BSD style to show processes
+
+* ps -x ==> show all the processes by the owner(show the owner processes)
+
+* ps -U USERNAME ==> show all processes of specefic user(USERNAME)
+
+* ps -G GROUP-NAME ==> show all processes of specefic group(GROUP-NAME)
+
+* ps r ==> show all runnig processes
+
+* -j ==> jobs format
+
+* -H ==> show processes hierarchy
+
+---
+
+* --forest ==> ASCII art procces hierarchy
+
+* -f ==> to perform full-format listing
+
+* -p ==> pid
+
+---
+
+# id command
+
+* Print user and group information for the specified USER,
+or (when USER omitted) for the current user
+
+* --group or -g ==> show effective group id
+
+* -G or --groups ==> show all groups id
+
+* -n or --name ==> print name instead of number
+
+* -r or --real ==> print real id instead of effective id
+
+* -u or --user ==> print only effective user id
 
 ---
 
