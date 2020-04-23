@@ -138,6 +138,10 @@ marp: true
 
 * w ==> shows us all logged in users
 
+* who -a ==> to see logged in users
+
+* users ==> to see logged in users
+
 ---
 
 # to give all privileges to a user in visudo
@@ -358,6 +362,8 @@ And this is much same as root
 
 ---
 
+# Top
+
 * top (htop) ==> to monitor the system resources
   * shift + m ==> sort by memory
   * shift + p ==> sort by cpu
@@ -365,8 +371,27 @@ And this is much same as root
     * Best priority number = -20
     * Worst priority number = 20
   * k ==> kill a process
+  * q ==> to quit
+  * s ==> change process update rate
+  * m ==> change style or remove memory usage
+
+---
+
+* -d ==> delay
+
+* -p ==> process id
+
+* -n ==> number of updates for example:
+  * top -n 2 ==> 2 times will update and show
+
+* -b ==> batch mode and it's useful for write top information like log file
+
+---
+
 * kill ==> To send signal to process like kill
   * -L ==> to see the list of signals
+
+* uptime ==> will show us the system up time
 
 ---
 
@@ -654,7 +679,7 @@ just cut a part of file for example usernames in passwd files
 
 ---
 
-# Proc(Programmed Random OCcurence)
+# Proc(Programmed Random Occurrence)
 
 * /proc is linked to kernel and virtual file
 * /proc is for process are running in our system
@@ -1446,7 +1471,6 @@ append only (a), no atime updates (A), compressed (c), no copy on write (C), no 
 * ldd PROGRAM_NAME ==> we can* see the library depencies
   * Example: ldd /bin/ls
 
-
 ---
 
 * **temporary add a software library**
@@ -1513,6 +1537,10 @@ or (when USER omitted) for the current user
 * -r or --real ==> print real id instead of effective id
 
 * -u or --user ==> print only effective user id
+
+---
+
+# **uname**
 
 ---
 
