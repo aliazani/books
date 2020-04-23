@@ -38,6 +38,8 @@ In HTML 5, the declaration is simple
 
 * \<em> ==> emphasis instead of italic (i tag) for semantic html
 
+* \<mark> ==> highlight a text
+
 * \<!-- Comment text --> ==> comment tag and it's not showing in the browser
 
 ---
@@ -84,4 +86,38 @@ In HTML 5, the declaration is simple
 
 * input types: text, password, submit, reset, checkbox, color, date, email, file, hidden, image, radio, url, search , ...
 
-* 
+---
+
+# Form method
+
+* we have two methods for giving the user information in forms
+  * GET ==> in url
+  * POST ==> To backend webserver
+  
+* \<div> ==> division tag to divide content and wrap the content
+  
+* \<span> ==> span tag to divide content and wrap the content but it's an inline element
+
+* \<pre> ==> preserve spaces and blank lines
+
+* \<p style="color:blue;">This is a paragraph with css style </p> ==> use css(color) in html
+
+* \<p style="font-family:courier;">This is a paragraph with css style </p> ==> use css(font) in html
+
+* \<p style="text-align:center;">This is a paragraph with css style </p> ==> use css(align) in html
+
+* \<p style="font-size:50px;">This is a paragraph with css style </p> ==> use css(font-size) in html
+
+* \<p style="background-color:blue;">This is a paragraph with css style </p> ==> use css(bg-color) in html
+
+* \<sub> ==> subscript
+
+* \<del> ==> delete tag
+
+* \<q> ==> quotation tag
+
+* \<blockquote> ==> section that is quoted from another source(Browsers usually indent)
+
+* \<bdo dir="rtl">This is test.</bdo> ==> Bi-Directional Override
+
+* \<abbr title="Mr rtb">Who</abbr> ==> abbreviation tag
