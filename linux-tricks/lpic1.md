@@ -16,7 +16,7 @@ marp: true
 # commands
 
 * whoami ==> to see your username in linux
-* su USERNAME ==> is for swtich between users
+* su USERNAME ==> is for switch between users
 * passwd USERNAME ==> change users password
 * useradd USERNAME ==> This will add a new user
 * clear or ctrl+l ==> to clean the terminal screen
@@ -29,7 +29,7 @@ marp: true
 ---
 
 * ls (list) ==> to show us the list of our files
-* vi ==> This is wonderfull text editor in linux
+* vi ==> This is wonderful text editor in linux
 
 ---
 
@@ -41,7 +41,7 @@ marp: true
 
 ---
 
-# vi shorcuts in command mode
+# vi shortcuts in command mode
 
 * Shift + l ==> go to the last line of current page ==> last line
 * Shift + h ==> go to the first line of current page ==> head
@@ -49,9 +49,9 @@ marp: true
 * NUM + Shift + g  OR NUM +  gg ==> go to the NUM line of file
 * NUM yy ==> copy or yanking NUM line
 * yG ==> copy all text from current line to the last line
-* NUM dd ==> delet or cut NUM lines of text
-* **p** ==> paste the copied or cutted text to the underneath line
-* **P** ==> paste the copied or cutted text to the upper  line
+* NUM dd ==> delete or cut NUM lines of text
+* **p** ==> paste the copied or cut text to the underneath line
+* **P** ==> paste the copied or cut text to the upper  line
 * cc ==> remove the text of current line and goto insert mode  
 * R ==> goto replace mode and rewrite everything
 
@@ -82,7 +82,7 @@ marp: true
 
 * :terminal ==> to open a terminal
 
-* :split or :sp ==> to split terminal horizentally
+* :split or :sp ==> to split terminal horizontally
 
 ---
 
@@ -116,7 +116,7 @@ marp: true
 ---
 
 * **:!** terminal-commands ==> to run terminal commands like ls, pwd , ...
-* bufffer NUM ==> to changes between multiple files
+* buffer NUM ==> to changes between multiple files
 * buffer! NUM ==> don't save the changes and go to NUM file
 * bp ==> previous buffer
 * bn ==> next buffer
@@ -140,7 +140,7 @@ marp: true
 
 ---
 
-# to give all priviledges to a user in visudo
+# to give all privileges to a user in visudo
 
 ## write username under the root user and done it's like this
 
@@ -162,7 +162,7 @@ And this is much same as root
 
 ---
 
-# **File Premissions**
+# **File Permissions**
 
 ---
 
@@ -255,8 +255,8 @@ And this is much same as root
 
 # **Apt**
 
-* /etc/apt ==> is the location of sources.list and in sources.list we have repos
-* you can add repos of another program to download and update them ==> **security risk**
+* /etc/apt ==> is the location of sources.list and in sources.list we have repositories
+* you can add repositories of another program to download and update them ==> **security risk**
 * apt install PACK-Name => to install a package
   * -y ==> means yes when ask yes/no to install
   * -s ==> is for simulation
@@ -265,7 +265,7 @@ And this is much same as root
 
 ---
 
-## **diffrence between upgrade and dist-upgrade**
+## **difference between upgrade and dist-upgrade**
 
 * dist-upgrade ==> will install and upgrade kernel and install it
 * upgrade ==> is for update packages not kernel
@@ -287,10 +287,10 @@ And this is much same as root
 * dpkg -i(--install) PACK-NAME ==> to install a package
 * dpkg --get-selections ==> to get all the installed package
 * dpkg -L PACKAGE_NAME ==> to see all the files and locations of file of a package that installed
-* dpkg-reconfigure PACK-NAME ==> to reconfig a package after reinstall or update
-* to install depnces of dpkg package
+* dpkg-reconfigure PACK-NAME ==> to reconfigure a package after reinstall or update
+* to install dependencies of dpkg package
   * apt-get update
-  * apt-get -f(--fix-broken) upgrade ==> to fix depedences of a package
+  * apt-get -f(--fix-broken) upgrade ==> to fix dependencies of a package
 
 ---
 
@@ -314,17 +314,17 @@ And this is much same as root
 * whereis nano ==> to see the location of a package
 * we can't install a package when a package with the same name exist
 * rpm -i PACKAGE-NAME ==> install the package
-* rpm -e PACKAGE-NAME ==> unistall the package
+* rpm -e PACKAGE-NAME ==> uninstall the package
 * rpm -ihv PACKAGE-NAME
   * -h ==> show the progress
   * -v ==> for verbose
-* rpm -q PACKAGE-NAME ==> quries the package
+* rpm -q PACKAGE-NAME ==> queries the package
 * rpm -qi PACK ==> show the installation information
 * rpm -q --list PACK ==> to see the location of all installed files
 
 ---
 
-* rpm -qR PACK ==> to see the requirments of a package
+* rpm -qR PACK ==> to see the requirements of a package
 * rpm -u PACK ==> to upgrade the package
 * rpm -f PACK ==> to upgrade the package
 * rpm --rebuilddb ==> to rebuild database after remove or install a package
@@ -333,7 +333,7 @@ And this is much same as root
 
 # **yum or dnf**
 
-* To add repos ==> cd /etc/yum.repoes.d and you can find them there
+* To add repositories ==> cd /etc/yum.repoes.d and you can find them there
 * yum update ==> update and ask for upgrade
 * yum check-update ==> to see if updates are available
 * yum search PACK ==> to search for a package
@@ -341,12 +341,12 @@ And this is much same as root
 * yum remove PACK ==> to remove a package
 * yum list PACK ==> to show us the information about the package
 * yum info PACK ==> to show us the installation of a package
-* yum deplist PACK ==> to see the dependecies of a package
+* yum deplist PACK ==> to see the dependencies of a package
 
 ---
 
-* yum --force install PACK ==> to make force to install package without dependncies
-* yum clean { all | packages | } ==> to clean the installation files and another usless files
+* yum --force install PACK ==> to make force to install package without dependencies
+* yum clean { all | packages | } ==> to clean the installation files and another useless files
 
 ---
 
@@ -361,11 +361,11 @@ And this is much same as root
 * top (htop) ==> to monitor the system resources
   * shift + m ==> sort by memory
   * shift + p ==> sort by cpu
-  * r ==> to renice a pid we should first enter the pid and then the nice number
+  * r ==> to re-nice a pid we should first enter the pid and then the nice number
     * Best priority number = -20
     * Worst priority number = 20
   * k ==> kill a process
-* kill ==> To send signal to proces like kill
+* kill ==> To send signal to process like kill
   * -L ==> to see the list of signals
 
 ---
@@ -378,9 +378,9 @@ And this is much same as root
 
 * locate ==> first you should use **updatedb** to update the database of files
 
-* This tool is indexing all of the files and is faster than find commnad but less flexibale
+* This tool is indexing all of the files and is faster than find command but less flexible
 
-* /etc/updatedb.conf ==> is the configuration for updatedb command
+* /etc/updatedb.conf ==> is the configuration for update-db command
   
   * BIND_MOUNT ==> allows us to mount all or part of another file system
 
@@ -410,7 +410,7 @@ And this is much same as root
 
 * maxdepth ==> depth of search (sub directories level)
 
-* -uid ==> files is owned by userid
+* -uid ==> files is owned by user-id
 
 * -gid ==> files is owned by group id
 
@@ -502,7 +502,7 @@ And this is much same as root
 
 # how to redirect stdout and stderr to 2 files or 1 file
 
-* cat file1 nofile_exist file2 >> output  2>> errmessage ==> to redirect stdout and stderr to 2 seprate files
+* cat file1 nofile_exist file2 >> output  2>> errmessage ==> to redirect stdout and stderr to 2 separate files
 * cat file1 nofile_exist file2 >> output  2>&1 ==> redirect stdout and stderr to one file
 * cat file1 no_file_exist &> out ==> to write stderr and stdout to a file
 * cat file1 no_file_exist &>> out ==> to append stderr and stdout to a file
@@ -528,10 +528,10 @@ And this is much same as root
 # grep
 
 * grep REGEX FILE ==> to find a regex in a file
-  * grep ^hello file ==> find all the hello at the beggining of the file
+  * grep ^hello file ==> find all the hello at the beginning of the file
   * -c ==> is for count
   * grep hello$ file ==> find all the hello at the end of the line
-  * grep [CHARACTERS] file ==> search for any of character in the bracket for exmp :
+  * grep [CHARACTERS] file ==> search for any of character in the bracket for example :
   grep [hello] file ==> will find all the h, e, l, l, o chars in file
   * -i ==> incase sensitive
   * [a-z] ==> find all the chars from **a** to **z**
@@ -580,7 +580,7 @@ hello$
 # cut
 
 * example of usage:
-just cut a part of file for example uernames in passwd files
+just cut a part of file for example usernames in passwd files
 * cut -f1 -d: passwd
   * -f ==> field or list
   * -d ==> delimiter
@@ -657,16 +657,16 @@ just cut a part of file for example uernames in passwd files
 # Proc(Programmed Random OCcurence)
 
 * /proc is linked to kernel and virtual file
-* /proc is for proccess are running in our system
+* /proc is for process are running in our system
 * /proc/uptime ==> the system uptime in seconds
 * /proc/version ==> the version of system and kernel
-* /proc/meminfo ==> to see the momery info s
+* /proc/meminfo ==> to see the memory info s
 * /proc/filesystems ==> the file system we can read and write to them
 
 ---
 
-* **more** command is like **less** but less is faster because it'snot to load the whole file at once
-* /proc ==> shows us the proccess
+* **more** command is like **less** but less is faster because it's not to load the whole file at once
+* /proc ==> shows us the process
   * example:
     1. run firefox
     2. ps aux | grep firefox
@@ -678,7 +678,7 @@ just cut a part of file for example uernames in passwd files
 
 # /dev
 
-* contains file reffrence to hardware devices and it's components
+* contains file reference to hardware devices and it's components
 * df -h ==> disk free -human-readable
 
 * sda5 ==> extended usually for swap
@@ -695,7 +695,7 @@ just cut a part of file for example uernames in passwd files
 
 * You can see the system log in /var/log that changes after every reboot
 
-* /var/spool/ ==> is for everything like spool for exmp:cron
+* /var/spool/ ==> is for everything like spool for example:cron
 
 * /var/mail ==> for send mail or mail files
 
@@ -743,7 +743,7 @@ just cut a part of file for example uernames in passwd files
 
 * -s 00:1f(Intel) ==> show us the pci with 00:1f(Intel) vendor id(Kind of a search like grep)
 
-* lspci uses /usr/share/misc/pci.ids ==> you can cat it and it shows us the information about pcis
+* lspci uses /usr/share/misc/pci.ids ==> you can cat it and it shows us the information about pc's
 
 * -i sub.ids ==> Use specified ID database instead of /usr/share/misc/pci.ids
 
@@ -755,7 +755,7 @@ just cut a part of file for example uernames in passwd files
 
 * List USB devices
 
-* -s ==> search mechanisem
+* -s ==> search mechanism
 
 * -v ==> verbose
 
@@ -773,7 +773,7 @@ just cut a part of file for example uernames in passwd files
 
 * -r ==> remove a module on the kernel
 
-* find /lib/modules/$(uname -r) -type f -name '*.ko' ==> to all of the linux kernel moduels
+* find /lib/modules/$(uname -r) -type f -name '*.ko' ==> to all of the linux kernel modules
 
 * lsmod | grep modulename ==> to find module installed or not
 
