@@ -59,10 +59,17 @@ marp: true
 
 * u ==> undo
 * Ctrl+r ==> redo
-* Shift + 4 = $ ==> go to end of current line
+* Shift + 4 = $ ==> go to end of current line(like regex)
+* Shift + 6 = ^ ==> go to start of current line(like regex)
 * 0  ==> go to start of current line
 * o ==> open a line below
 * O ==> open a line at the top of current line
+* x ==> remove one character
+* r ==> replace one character
+* a ==> append and goto insert mode
+* dw/de ==> delete a word/ delete to end of word
+* J ==> join lines
+* . ==> repeat the last command
 
 ---
 
@@ -1553,7 +1560,35 @@ or (when USER omitted) for the current user
 
 ---
 
-*
+# nice
+
+* need root access
+
+* nice allows us to lanunch a new program with a specified priority
+
+* default priority of nice is 10
+
+* nice -n -20 top ==> run the top with the highest priotity
+
+* -20 is the highest priority and 19 is the lowest priority
+
+* pgrep COMMAND-NAME ==> gives us the process-id of COMMAND-NAME
+
+---
+
+# renice
+
+* need root access
+
+* renice allow us to change the priority on an already running process
+
+* -u ==> change priority level for all process under a specified user
+
+* -p ==> change priority on a process-id
+
+* -g ==> change priority on a group process-id
+
+* renice -n -10 -p 1232 ==> change priority to 10 for 1232 process-id
 
 ---
 
