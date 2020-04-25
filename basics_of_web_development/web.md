@@ -1,5 +1,5 @@
 ---
-marp: true
+marp: false
 ---
 
 # Basics of website development
@@ -121,3 +121,14 @@ In HTML 5, the declaration is simple
 * \<bdo dir="rtl">This is test.</bdo> ==> Bi-Directional Override
 
 * \<abbr title="Mr rtb">Who</abbr> ==> abbreviation tag
+
+* \<a href="site url" target="_blank">Site name</a> ==> open the link in new tab
+
+* \<table> ==> define a table
+  * \<th> ==> table header
+  * \<tr> ==> table row
+  * \<td> ==> table data
+
+* \<dl> ==> description list
+  * \<dt> ==> description term
+  * \<dd> ==> definition description
