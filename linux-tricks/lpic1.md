@@ -1521,6 +1521,15 @@ export LD_LIBRARY_PATH=/usr/lib/new-library:/usr/lib/new-lib2 ==> we don't need 
 
 * -p ==> pid
 
+* -t ==> tty
+
+* ps L ==> list of formats
+
+* --format or -o ==> format option example:
+  * ps -eo pid,ppid,user,cmd
+
+* -C ==> command name
+
 ---
 
 # id command
@@ -1537,6 +1546,14 @@ or (when USER omitted) for the current user
 * -r or --real ==> print real id instead of effective id
 
 * -u or --user ==> print only effective user id
+
+---
+
+# nice and renice
+
+---
+
+*
 
 ---
 
