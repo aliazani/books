@@ -15,7 +15,7 @@ marp: true
 
 # commands
 
-* whoami ==> to see your username in linux
+* whoami ==> to see your username in Linux
 * su USERNAME ==> is for switch between users
 * passwd USERNAME ==> change users password
 * useradd USERNAME ==> This will add a new user
@@ -29,7 +29,7 @@ marp: true
 ---
 
 * ls (list) ==> to show us the list of our files
-* vi ==> This is wonderful text editor in linux
+* vi ==> This is wonderful text editor in Linux
 
 ---
 
@@ -97,7 +97,7 @@ marp: true
 
 ## search ==> /NAME or ?NAME
 
-* n ==> hit n to goto the next one
+* n ==> hit n to go to the next one
 
 ## search and replace ==>
 
@@ -413,11 +413,11 @@ And this is much same as root
 * This tool is indexing all of the files and is faster than find command but less flexible
 
 * /etc/updatedb.conf ==> is the configuration for update-db command
-  
+
   * BIND_MOUNT ==> allows us to mount all or part of another file system
 
   * PRUNE_BIND_MOUNT ==> ignore bind mount points
-  
+
   * PRUNE_FS ==> the file systems we want ignore them
 
   * PRUNE_NAME ==> the extension or name we want ignore them like .git
@@ -1044,7 +1044,7 @@ just cut a part of file for example usernames in passwd files
 * we can edit or create files with space by 2 trick:
   * use \ before each space
     * exmp: vi this\ file\ has\ space ==> to create single file `this file has space`
-  
+
   * use  \' file name \' or \" file name\"
 
 * the limit for file name is 256 character and we can't create a file with more than 256 char in most file systems
@@ -1178,7 +1178,7 @@ just cut a part of file for example usernames in passwd files
 
 # cpio
 
-* 
+*
 
 ---
 
@@ -1317,8 +1317,8 @@ just cut a part of file for example usernames in passwd files
 * When the sticky bit is set on a directory, only the root user, the owner of the directory, and the owner of a file can remove files within said directory
 
 * -rwx rwx rwt
-  * x user to X ==> if we don't have execute permission
-  * x user to x ==> if we have execute permission
+  * x user to T ==> if we don't have execute permission
+  * x user to t ==> if we have execute permission
 
 * chmod o+t or 1\-\-\- FILE-NAME ==> to set uid
 
@@ -1385,7 +1385,7 @@ append only (a), no atime updates (A), compressed (c), no copy on write (C), no 
 
 * C (no copy on write) ==> Files with this attribute are not subject to copy-on-write updates. If this attribute is set on a directory, new files created in that directory will have this attribute set. Note: This attribute is only effective on filesystems which perform copy-on-write. On btrfs, this attribute should be set on new or empty files. If this attribute is set after a btrfs file already contains data, the time when its data will be stable is undefined
 
-* cp --reflink file1 /new/file1 ==> copy-on-write for file1 , this feature share data blocks for file1 and copy of it and save a lot of space in our disk and if we change paort of a copied file1 , it will allocate the size of changes to it
+* cp --reflink file1 /new/file1 ==> copy-on-write for file1 , this feature share data blocks for file1 and copy of it and save a lot of space in our disk and if we change part of a copied file1 , it will allocate the size of changes to it
 
 ---
 
@@ -1431,9 +1431,9 @@ append only (a), no atime updates (A), compressed (c), no copy on write (C), no 
 
 ---
 
-* sudo dd if=/dev/sda of=./mbr.iso bs=512 count=1 ==> back the master boot record
+* sudo dd if=/dev/sda of=./mbr.iso bs=512 count=1 ==> backup the master boot record
 
-* sudo dd if=/dev/sda1 of=./harddisk.iso bs=5M count=1 ==> back the harddisk
+* sudo dd if=/dev/sda1 of=./harddisk.iso bs=5M count=1 ==> backup the harddisk
 
 * dd if=/dev/zero of=./zeros bs=1M count=1 ==> create a file named zeros that filled with zero and it's size is 1 mega bytes
 
@@ -1457,8 +1457,6 @@ append only (a), no atime updates (A), compressed (c), no copy on write (C), no 
 
 * -r ==> refrence file
 
-* -c ==> don't create any file
-
 ---
 
 # **Software libraries**
@@ -1473,9 +1471,9 @@ append only (a), no atime updates (A), compressed (c), no copy on write (C), no 
 
 * By default, libraries are located in /usr/local/lib, /usr/local/lib64, /usr/lib and /usr/lib64; system startup libraries are in /lib and /lib64
 
-* ldconfig ==> clears and reconfigure cash for shared libraries
+* ldconfig(linker dynamic config) ==> clears and reconfigure cash for shared libraries
 
-* ldd PROGRAM_NAME ==> we can* see the library depencies
+* ldd(List Dynamic Dependencies) PROGRAM_NAME ==> we can see the library depencies
   * Example: ldd /bin/ls
 
 ---
