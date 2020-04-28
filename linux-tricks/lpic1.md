@@ -1634,6 +1634,26 @@ or (when USER omitted) for the current user
 
 ---
 
+* uname command allows us to query system information
+
+* -a ==> all
+
+* -s ==> kernel name
+
+* -v ==> kernel version
+
+* -r ==> kernel release
+
+* -m ==> machine hardware name
+
+* -o ==> operating system
+
+* -p ==> processor type
+
+* -n ==> network hostname
+
+---
+
 # **Tmux**
 
 ---
