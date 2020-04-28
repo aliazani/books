@@ -1590,6 +1590,46 @@ or (when USER omitted) for the current user
 
 ---
 
+# **Kill**
+
+---
+
+* kill command allow us to kill a process in linux
+
+* kill -l ==> show us available signals we can use
+
+* signal 1 ==> SIGHUB
+
+* signal 9 ==> SIGKILL
+
+* signal 15 ==> SIGTERM
+
+* kill  -NUMBER-SIGNAL PID ==> kill a process by singal nubmer
+
+* kill -SIGNAL-NAME PID ==> kill a process by singal name
+
+---
+
+# killall
+
+* killall -[SIG-NUMBER or SIG-NAME] PROGRAM-NAME
+
+* -i ==> interactive
+
+* -u ==> Kill only processes the specified user owns
+
+* -I ==> case insensitive
+
+* -l ==> list
+
+* -y ==> younger than N hours
+
+* -o ==> older than
+
+* -q ==> quiet
+
+---
+
 # **uname**
 
 ---
