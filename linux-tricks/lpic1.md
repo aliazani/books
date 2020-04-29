@@ -1672,6 +1672,30 @@ or (when USER omitted) for the current user
 
 ---
 
+# nohup
+
+* nohup is a POSIX command to ignore the HUP signal and instructs the system to continue running it even if the session is disconnected
+
+* nohup wget DOWNLOAD-LINK ==> example of nohup
+
+---
+
+# free
+
+* The free command provides information about the total amount of physical and swap memory
+
+* -b ==> bytes
+
+* -m ==> mega bytes
+
+* -g ==> gigabytes
+
+* -h ==> human readable
+
+* -s NUMBER-OF-SECONDS ==>  seconds
+
+* -c ==> count
+
 ---
 
 # **Tmux**
