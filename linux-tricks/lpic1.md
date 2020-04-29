@@ -959,7 +959,7 @@ just cut a part of file for example usernames in passwd files
 
 * /sbin ==> system binary
 
-* /stv ==> Serve folder. It holds site specific data to be served by the system for protocols such as, ftp, rsync, www, cvs etc.
+* /srv ==> Serve folder. It holds site specific data to be served by the system for protocols such as, ftp, rsync, www, cvs etc.
 
 * /tmp ==> temporary files
 
@@ -1554,7 +1554,7 @@ or (when USER omitted) for the current user
 
 ---
 
-# nice and renice
+# **nice and renice**
 
 ---
 
@@ -1651,6 +1651,26 @@ or (when USER omitted) for the current user
 * -p ==> processor type
 
 * -n ==> network hostname
+
+---
+
+# **Jobs**
+
+---
+
+* Ctrl + c ==> kill a program
+
+* Ctrl + z ==> stop a program
+
+* jobs ==> list of all stopped jobs and running jobs inside of terminal
+
+* fg %JOB-NUMBER ==> to give the program back to the foreground
+
+* dd if=/dev/zero of=/dev/null bs=100M count=100 **&** ==> running a program in background with **&**
+
+* bg %JOB-NUMBER ==> to send a program to the background
+
+---
 
 ---
 
