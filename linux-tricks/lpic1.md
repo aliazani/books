@@ -456,11 +456,19 @@ And this is much same as root
 
 * search for binary, man page and libraries files and directories
 
+* whereis pwd ==> show us the manpage location and binary files location
+
 ---
 
 # which
 
 * only search the PATH location
+
+* echo $PATH ==> show us the PATH variables
+
+* /bin/pwd ==> exactly the same as pwd that used with PATH
+
+* which is used to locate the executable file associated with the given command by searching it in the path environment variable
 
 ---
 
