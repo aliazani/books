@@ -434,13 +434,17 @@ And this is much same as root
 
 * -name ==> name of file
 
+* -iname ==> i(ignore case sensitive) name
+
 * -perm ==> permission of file
 
 * -size ==> size of file
   * M ==> mega-byte
   * G ==> giga-byte
 
-* maxdepth ==> depth of search (sub directories level)
+* -maxdepth ==> depth of search (sub directories level)
+
+---
 
 * -uid ==> files is owned by user-id
 
@@ -449,6 +453,17 @@ And this is much same as root
 * -group ==> files is owned by group name
 
 * -user ==> files is owned by user name
+
+* -type ==> to specify the type of file
+
+* -exec command ==> to execute the command
+  * find . -perm 777 -exec chmod 555 {} \;
+
+* -empty ==> empty files
+
+* -mtime ==> modified time
+
+* 
 
 ---
 
