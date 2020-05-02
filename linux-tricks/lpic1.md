@@ -38,6 +38,7 @@ marp: true
 * command mode ==> Press **Esc**
 * insert mode ==> Press **i**
 * x mode ==>  **:**
+* Visual mode ==> press **v**
 
 ---
 
@@ -66,10 +67,16 @@ marp: true
 * O ==> open a line at the top of current line
 * x ==> remove one character
 * r ==> replace one character
+
+---
+
 * a ==> append and goto insert mode
+* A ==> append and goto end of line the goto insert mode
 * dw/de ==> delete a word/ delete to end of word
 * J ==> join lines
 * . ==> repeat the last command
+* % ==> go to the end of brackets
+* \> ==> in visual mode indent all the selected block 
 
 ---
 
@@ -80,16 +87,25 @@ marp: true
 1. set hlsearch
 2. hi Search ctermbg=LightYellow
 3. hi Search ctermfg=Red
+4. set paste ==> to go to paste mode
 
 ---
 
 # Some tricks
 
-* :vs  ==> to split the terminal vertically
+* :vs or vsplit  ==> to split the terminal vertically
 
 * :terminal ==> to open a terminal
 
 * :split or :sp ==> to split terminal horizontally
+
+* Ctrl + w + arrows ==> to move to the splited part in command mode
+
+* :Explore ==> go to some kind of file exploring in gui
+
+* :sort ==> sort the selected part in visual mode
+
+* 
 
 ---
 
@@ -102,7 +118,8 @@ marp: true
 ## search and replace ==>
 
 * :%s/search-name/replace-name/ ==> replace **just 1st one** search name in all lines ==> xmode
-* % ==> for lines
+* % ==> for all lines
+* 18,37s/old-text/new-text ==> replace the old-text with new-text in 18 to 37 lines
 * /g ==> global for a line
 * :%s/search-name/replace-name/gc ==> make the changes global and replace all the search name for entire line and for all lines with confirmation(c)==> xmode
 
@@ -123,10 +140,14 @@ marp: true
 ---
 
 * **:!** terminal-commands ==> to run terminal commands like ls, pwd , ...
-* buffer NUM ==> to changes between multiple files
-* buffer! NUM ==> don't save the changes and go to NUM file
-* bp ==> previous buffer
-* bn ==> next buffer
+* !! or :.!command ==> insert the output of command to our file
+* :buffer NUM ==> to changes between multiple files
+* :buffer! NUM ==> don't save the changes and go to NUM file
+* :bp ==> previous buffer
+* :bn ==> next buffer
+* :bd ==> delete buffer
+* :b NAME ==> go to buffer with name NAME
+* :ls ==> show the list of buffers
 
 ---
 
@@ -457,13 +478,11 @@ And this is much same as root
 * -type ==> to specify the type of file
 
 * -exec command ==> to execute the command
-  * find . -perm 777 -exec chmod 555 {} \;
+  * find . -perm 777 -exec chmod 555 {} \\;
 
 * -empty ==> empty files
 
 * -mtime ==> modified time
-
-* 
 
 ---
 
