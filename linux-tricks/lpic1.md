@@ -1744,12 +1744,37 @@ or (when USER omitted) for the current user
 
 ---
 
-# mount
+# mkfs(make file system)
 
 * The journaling concept
 
-* 
+* -t ==> type
 
+* default use 95% of file system and reserve 5%
+
+* -m ==> reserved block percentage
+
+* blkid /dev/sdb2 ==> show the information about uuid and fs-type of sdb2
+
+---
+
+# mount
+
+* -a ==> all file systems in fstab
+
+* --fstab ==> alternative fstab file path
+
+* -r ==> read-only
+
+* -w ==> write
+
+* --rw ==> mount as read-write (default)
+
+* -t ==> type
+
+* mount --rw -t ext4 /dev/sdb8 /home/new-mount ==> mount dev/sdb8 to /home/new-mount
+
+* umount /dev/sdb8 or umount /home/new-mount ==> to unmount the mounted device
 
 ---
 
