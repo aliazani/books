@@ -1740,6 +1740,19 @@ or (when USER omitted) for the current user
 
 ---
 
+# **mount and format the drives**
+
+---
+
+# mount
+
+* The journaling concept
+
+* 
+
+
+---
+
 # **Tmux**
 
 ---
