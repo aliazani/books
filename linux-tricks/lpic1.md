@@ -1770,11 +1770,47 @@ or (when USER omitted) for the current user
 
 * --rw ==> mount as read-write (default)
 
+* -o ==> option
+
 * -t ==> type
 
 * mount --rw -t ext4 /dev/sdb8 /home/new-mount ==> mount dev/sdb8 to /home/new-mount
 
 * umount /dev/sdb8 or umount /home/new-mount ==> to unmount the mounted device
+
+---
+
+# fstab
+
+* if we want to mount a drive permanently we should use fstab
+
+* vim /etc/fstab
+* \# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+
+* example: /dev/sdb6 /home/new-mount  ext4  defaults,rw 0 0
+
+* sudo lsblk ==> show the mount points informations
+
+* sudo blkid ==> show the UUID of drives
+
+* mount ==> show the mounted drives and mount point and mount options
+
+---
+
+# fdisk
+
+* tool for partioning
+
+* fdisk -l ==> list of all partions and information of them
+
+* fdisk PARTION-NAME(ex: /dev/sdb8) ==> to go to partioning mode
+  * m ==> help
+  * n ==> new
+  * p ==> print
+  * w ==> write
+  * d ==> delete
+  * l ==> list of known partions
+  * a ==> toggle a bootable flag
 
 ---
 
