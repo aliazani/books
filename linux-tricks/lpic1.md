@@ -105,8 +105,6 @@ marp: true
 
 * :sort ==> sort the selected part in visual mode
 
-* 
-
 ---
 
 # Search and replace in vim
@@ -1811,6 +1809,12 @@ or (when USER omitted) for the current user
   * d ==> delete
   * l ==> list of known partions
   * a ==> toggle a bootable flag
+
+---
+
+# swap
+
+* 
 
 ---
 
