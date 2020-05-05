@@ -1376,6 +1376,16 @@ just cut a part of file for example usernames in passwd files
 
 ---
 
+# chgrp
+
+* we can change group ownership of a file or directory by using chgrp
+
+* -R ==> recursive
+
+* chgrp GROUP-NAME -R folder
+
+---
+
 # umask
 
 * the umask command returns, or sets, the value of the system's file mode creation mask
@@ -1814,7 +1824,75 @@ or (when USER omitted) for the current user
 
 # swap
 
-* 
+* **how to create swap space**
+
+* dd if=/dev/zero of=/home/swap.swp bs=1024 cout=800k
+
+* mkswap /home/swap.swp
+
+* swapon /home/swap.swp
+
+* vi /etc/fstab
+
+* /home/swap.swp  none swap  defaults 0 0
+
+* swapoff -a ==> will umount all the swap
+
+---
+
+# removable device
+
+* mkswap /dev/sd?
+
+* swapon /dev/sd?
+
+* to use permanent swap we can edit fstab
+
+---
+
+# **df and du**
+
+---
+
+# df(disk free \ file-system)
+
+* -h ==> human readable
+
+* -a ==> all file system
+
+* -i ==> inodes
+
+* -T or --print-type
+
+---
+
+# du(disk usage)
+
+* example: du -h /home/new-file ==> show us the disk usage of new-file
+
+* -h ==> human readable
+
+* -a ==> all files
+
+* -k ==> kilobyte
+
+* -m ==> megabyte
+
+* --time ==> time of modification
+
+* --total or -c ==> total
+
+* -s ==> summary
+
+---
+
+# **less and more**
+
+---
+
+* less load the only part of file we read but more load all the file so for big files takes long to load with more
+
+* so more uses more memory than less
 
 ---
 
