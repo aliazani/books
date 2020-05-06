@@ -1886,6 +1886,32 @@ or (when USER omitted) for the current user
 
 ---
 
+# fsck(file system check)
+
+* fsck is a tool for check and repair a linux file system
+
+* cannot use on the mounted devices(drives)
+
+* -p ==> automatic repait
+
+* -N ==> don't execute, just show what would be done
+
+* -A ==> check all filesystems
+
+* -M ==> don't check the mounted filesytems
+
+* -C ==> display progress bar
+
+---
+
+# e2fsk
+
+* check a linux ext2/ext3/ext4 file system
+
+* same options as fsck
+
+---
+
 # **less and more**
 
 ---
