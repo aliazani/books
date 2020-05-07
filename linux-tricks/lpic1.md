@@ -76,7 +76,7 @@ marp: true
 * J ==> join lines
 * . ==> repeat the last command
 * % ==> go to the end of brackets
-* \> ==> in visual mode indent all the selected block 
+* \> ==> in visual mode indent all the selected block
 
 ---
 
@@ -1793,7 +1793,7 @@ or (when USER omitted) for the current user
 * if we want to mount a drive permanently we should use fstab
 
 * vim /etc/fstab
-* \# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+* \# \<file system> \<mount point>   \<type>  \<options>       \<dump>  \<pass>
 
 * example: /dev/sdb6 /home/new-mount  ext4  defaults,rw 0 0
 
@@ -1892,7 +1892,7 @@ or (when USER omitted) for the current user
 
 * cannot use on the mounted devices(drives)
 
-* -p ==> automatic repait
+* -p ==> automatic repair
 
 * -N ==> don't execute, just show what would be done
 
@@ -1909,6 +1909,42 @@ or (when USER omitted) for the current user
 * check a linux ext2/ext3/ext4 file system
 
 * same options as fsck
+
+---
+
+# **mke2fs and debugfs**
+
+---
+
+# mke2fs
+
+* create an ext2/ext3/ext4 filesystem
+
+* -t ==> type
+
+* -c ==> check for bad blocks
+
+* -J ==> journal option
+
+* -I ==> inode size
+
+* -N ==> number of inodes
+
+* -L ==> volume label
+
+---
+
+# debugfs
+
+* ext2/ext3/ext4 filesystem debugger
+
+* example: debugfs -w /dev/sdb?
+
+* -w ==> read and write mode (defult is read mode)
+
+* lsdel ==> list of deleted inodes
+
+* undel ==> undelete with new file for deleted inode
 
 ---
 
