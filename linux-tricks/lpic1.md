@@ -1805,6 +1805,10 @@ or (when USER omitted) for the current user
 
 ---
 
+# **File system utilities**
+
+---
+
 # fdisk
 
 * tool for partioning
@@ -1847,10 +1851,6 @@ or (when USER omitted) for the current user
 * swapon /dev/sd?
 
 * to use permanent swap we can edit fstab
-
----
-
-# **df and du**
 
 ---
 
@@ -1912,10 +1912,6 @@ or (when USER omitted) for the current user
 
 ---
 
-# **mke2fs and debugfs**
-
----
-
 # mke2fs
 
 * create an ext2/ext3/ext4 filesystem
@@ -1945,6 +1941,22 @@ or (when USER omitted) for the current user
 * lsdel ==> list of deleted inodes
 
 * undel ==> undelete with new file for deleted inode
+
+---
+
+# dumpe2fs
+
+* dumpe2fs command is used to print the super block and blocks group information for the filesystem present on device
+
+* Can be used with ext2/ext3/ext4 filesystem for information
+
+---
+
+# tune2fs
+
+* adjust tunnable filesystem parameters on ext2/ext3/ext4 filesystems
+
+* -l ==> list of content
 
 ---
 
@@ -1984,3 +1996,5 @@ or (when USER omitted) for the current user
 * Ctrl + b + s ==> list of windows
 * q to exit scroll mode
 * Ctrl + b + ? ==> help
+
+---
