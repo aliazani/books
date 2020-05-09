@@ -542,6 +542,8 @@ And this is much same as root
   * split -l 2 file
     * -l ==> line
 
+* exampel : split -l 2 file1 split-file
+
 ---
 
 # diff
@@ -1546,6 +1548,8 @@ export LD_LIBRARY_PATH=/usr/lib/new-library:/usr/lib/new-lib2 ==> we don't need 
 
 ---
 
+* pstree ==> shows us the process tree
+
 * reads this information from the virtual files in /proc   filesystem
 
 * ps ==> show the processes that are running for the current shell
@@ -1967,6 +1971,90 @@ or (when USER omitted) for the current user
 * less load the only part of file we read but more load all the file so for big files takes long to load with more
 
 * so more uses more memory than less
+
+---
+
+# **File manipulation**
+
+---
+
+# xargs
+
+* build and execute command lines from standard input
+
+* exmp-1: find . -iname "*.png" print0| xargs tar -cvzf images.tar.gz
+
+* exmp-2 : ls *.png | xargs -o rm
+
+---
+
+# join
+
+* join lines of two files on a common field
+
+---
+
+# paste
+
+* merge lines of files
+
+* example : paste file1 file2
+  * This is file1 This is file2
+    Line 2 of file1 Line 2 of file2
+
+---
+
+# od
+
+* dump files in octal and other formats
+
+* -b ==> octal
+
+---
+
+# sort
+
+* sort lines of text files
+
+* -h ==> human numeric sort
+
+* -n ==> numeric sort
+
+* -M ==> mounth sort
+
+* -r ==> reverse
+
+* -u ==> unique
+
+---
+
+# exapnd and unexpand
+
+* expand convets tabs to spaces
+
+* unexpand convets spaces to tabs
+
+---
+
+# tr(translate)
+
+* cat file1
+  * this is fiel1 and file1 is here.
+
+* tr file1 file2 < file1.txt
+  * this is file2 and file2 is here
+
+---
+
+# uniq
+
+* delete repeated lines
+
+* nl FILE-NAME ==> add number to file
+
+---
+
+# fmt
 
 ---
 
