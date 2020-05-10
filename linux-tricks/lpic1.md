@@ -207,7 +207,7 @@ And this is much same as root
 * chmod -R DIRECTORY-NAME 755 ==> change mode of file or  directory
   * **-R** is for recursive and change permission of directory and all content of it
 * tail -f FILE-NAME ==> show the tail of file
-  * **-f** is for show us live any changes
+  * **-f** is follow
 
 ---
 
@@ -513,7 +513,7 @@ And this is much same as root
 
 ---
 
-# **wc, split, cat, diff**
+# **wc, split, cat, diff, head, tail**
 
 ---
 
@@ -550,6 +550,26 @@ And this is much same as root
 
 * look at the difference between 2 files
 * diff file1 file2
+
+---
+
+# head
+
+* show the head of files
+
+* -n ==> number of line(default is 10)
+
+* -c ==> number of bytes
+
+---
+
+# tail
+
+* -f ==> follow
+
+* -n ==> number of line(default is 10)
+
+* -c ==> number of bytes
 
 ---
 
@@ -669,7 +689,7 @@ just cut a part of file for example usernames in passwd files
 
 * search and replace command stands for Stream editor
 * example:
-  1. sed 's/fulltime/parttime/' ==> change all fulltime to parttime
+  1. sed 's/fulltime/parttime/g' ==> change all fulltime to parttime
   2. sed 's/fulltime/parttime/w new.txt' ==> change all fulltime to parttime and just write the changes to new.txt file
   3. sed '/fulltime/w new.txt' ==> search for fulltime and write them in new.txt file
   4. sed '/fulltime/w new.txt' > /dev/null ==> same as 3 but not show any thing
@@ -678,6 +698,7 @@ just cut a part of file for example usernames in passwd files
   * [^c] ==> will match all character except for the one mentioned in braces(c)
   * s ==> substitute
   * w ==> write
+  * g ==> global
 
 ---
 
