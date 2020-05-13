@@ -1985,6 +1985,59 @@ or (when USER omitted) for the current user
 
 ---
 
+# **quota**
+
+---
+
+# disk quota
+
+* A disk quota is a limit set by a system administrator that restricts certain aspects of file system usage on modern operating systems. The function of setting quotas to disks is to allocate limited disk-space in a reasonable way
+
+* setup steps:
+  * vim /etc/fstab
+  * add usrquota,grpquota to options
+  * touch /quota.user /quota.group
+  * chmod 600 quota.user quota.group
+  * monut -o remount /
+  * quotacheck -avugm /home
+  
+---
+
+# quotacheck
+
+* scan a file system for disk usage, create, check and repair quota files
+
+* -a ==> all
+
+* -v ==> verbose
+
+* -u ==> user
+
+* -g ==> group
+
+* -m ==> don't try to remount file system readonly
+
+---
+
+# edquota(edit user quota)
+
+* setup steps:
+  * adduser quota-user
+  * edquota quota-user
+
+---
+
+# repquota
+
+* summarize quota for a file system
+
+* example: repquota /
+
+
+
+
+---
+
 # **less and more**
 
 ---
